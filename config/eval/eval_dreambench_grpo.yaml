@@ -1,0 +1,17 @@
+eval_json_path: ./datasets/dreambench_singleip.json
+offload: false
+num_images_per_prompt: 1
+model_type: flux-dev-uno-fused
+width: 512
+height: 512
+ref_size: -1
+num_steps: 25
+guidance: 4
+seed: 3407
+save_path: ./results/dreambench/
+only_lora: true
+concat_refs: true
+lora_rank: 512
+data_resolution: 512
+pe: d
+lora_path: ./checkpoints/

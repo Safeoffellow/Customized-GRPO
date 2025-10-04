@@ -1,0 +1,102 @@
+project_dir: ./run/uno_grpo/
+mixed_precision: "bf16"  # "no", "fp16", "bf16"
+gradient_accumulation_steps: 4
+seed: 42
+wandb_project_name: "uno_customized_grpo"
+wandb_run_name: null # null为随机
+wandb_tags: ['rank512', 'lr2e5', 'bs1', 'Syncd1w', '512x512', 'sample_step_25', 'dino + hps', '0.5 + 0.7', 'N_Gen_12', 'eta4', 'initn_false', 'gamma_04', 'dancegrpo', 'tanh', 'dynamic', '73']
+log_file: /data/oss_bucket_0/ziwei/log_file_tanh_dynamic_dino_hps_dancegrpo_lr_2e5_gamma_04_73.txt
+
+hps_high: 0.7
+hps_low: 0.3
+gamma: 0.4
+conflict_strategy: tanh   # "tanh", "max", "max", "harmonic"
+weight_strategy: dynamic
+
+model_name: "flux-dev-uno-fused"  
+load_pretrain_lora: true
+lora_rank: 512
+double_blocks_indices: null  
+single_blocks_indices: null 
+pe: "d"  
+gradient_checkpoint: true
+ema: false
+ema_interval: 1
+ema_decay: 0.99
+selective_checkpointing: 1.0
+
+# grpo specific
+fsdp_sharding_startegy: full
+sampling_steps: 25 
+eta: 0.4
+sde_solver: true 
+shift: 3 
+guidance_scale: 3.5
+init_same_noise: true
+text_dropout: 0.0
+use_clip: false
+use_dino: true
+use_hps_v3: true
+clip_weight: 0.7
+dino_weight: 0.5
+
+clip_range: 1e-4 
+adv_clip_max: 5.0
+
+use_group: true 
+num_generations: 12 
+timestep_fraction: 0.6 
+
+# 优化器配置
+learning_rate: 2.0e-5
+adam_betas: [ 0.9, 0.999 ]
+adam_eps: 1.0e-8
+adam_weight_decay: 0.00011
+max_grad_norm: 1.0
+
+# 学习率调度器配置
+lr_scheduler: "constant_with_warmup"
+lr_warmup_steps: 0
+max_train_steps: 100000
+lr_num_cycles: 1
+
+text_dropout: 0
+w: 512
+h: 512
+
+resume_from_checkpoint: null 
+gradient_checkpointing: true
+
+
+train_data_json: ./datasets/subject200k/train_1w_prompt_embedding.json
+
+train_batch_size: 1
+
+train_image_base: ./datasets/syncd
+
+resolution: 512
+resolution_ref: 512
+sampler_seed: 1223627
+dataloader_num_workers: 4
+lr_power: 1.0
+
+## misc
+resume_from_checkpoint: null
+checkpointing_steps: 50
+
+## MixGRPO
+training_strategy: all
+iters_per_group: 25
+group_size: 4
+sample_strategy: progressive
+prog_overlap: true
+prog_overlap_step: 1
+max_iters_per_group : 10
+min_iters_per_group: 1
+roll_back: true
+
+# other pa
+sp_size: 1
+train_sp_batch_size: 1
+use_cpu_offload: false
+master_weight_type: fp32
