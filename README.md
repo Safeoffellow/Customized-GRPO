@@ -22,10 +22,10 @@ pip install -r requirements.txt
 ```
 ---
 ## Dataset Preparation
-Dataset Preparation
-Training:
+Training datasets:
 Download and preprocess the [Syncd](https://github.com/nupurkmr9/syncd) dataset.
-Evaluation:
+
+Evaluation datasets:
 Please refer to [DreamBench](https://github.com/google/dreambooth) for benchmark images and prompts.
 ```
 ---
@@ -41,6 +41,7 @@ bash scripts/train_grpo_vlm.sh
 ```
 
 All training scripts are optimized on 8 GPUs by default. You can adjust the GPU number, batch size, reward functions, and other training parameters in the corresponding config files located in config/train/*.yaml
+
 ---
 ## Results
 <img src="assets/dot_figure.png" alt="result_1" width="500" />
@@ -48,9 +49,10 @@ All training scripts are optimized on 8 GPUs by default. You can adjust the GPU 
 ### Additional Cases
 <img src="assets/qualitative.png" alt="result_2" width="900" />
 
+## Release
 - [x] Release the code for training and evaluation.
 - [x] Release the training datasets.
 - [ ] Release the checkpoints
-- [x] Release the paper of Customized-GRPO on arXiv.
+- [ ] Release the paper of Customized-GRPO on arXiv.
 
 
