@@ -27,7 +27,7 @@ Download and preprocess the [Syncd](https://github.com/nupurkmr9/syncd) dataset.
 
 Evaluation datasets:
 Please refer to [DreamBench](https://github.com/google/dreambooth) for benchmark images and prompts.
-```
+
 ---
 ## Training
 Training in Customized-GRPO can be flexibly configured to use different reward models for optimizing the policy. By default, we adopt DINO-v2 for identity preservation and HPS-V3 for prompt adherence, which together provide strong alignment with human preferences
