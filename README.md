@@ -1,4 +1,4 @@
-# Customized-GRPO: Reinforcement Learning for Subject-Driven Image Generation
+# Customized-GRPO: From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation
 
 This repository provides the official implementation of **Customized-GRPO**, an online reinforcement learning framework for subject-driven text-to-image generation
 
