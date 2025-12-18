@@ -2,6 +2,12 @@
 
 This repository provides the official implementation of **Customized-GRPO**, an online reinforcement learning framework for subject-driven text-to-image generation
 
+<p align="center">
+  <a href="https://arxiv.org/abs/2510.18263">
+    <img src="https://img.shields.io/badge/arXiv-2510.18263-b31b1b.svg" height="30">
+  </a>
+</p>
+
 ## Introduction
 
 Subject-driven image generation aims to create novel images that both preserve the detailed identity of provided reference images _and_ follow a complex textual prompt. However, existing methods struggle to balance the trade-off between **identity preservation (fidelity)** and **prompt following (editability)**.
@@ -53,6 +59,6 @@ All training scripts are optimized on 8 GPUs by default. You can adjust the GPU 
 - [x] Release the code for training and evaluation.
 - [x] Release the training datasets.
 - [ ] Release the checkpoints
-- [ ] Release the paper of Customized-GRPO on arXiv.
+- [x] Release the paper of Customized-GRPO on arXiv.
 
 
