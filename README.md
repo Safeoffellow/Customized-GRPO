@@ -1,6 +1,6 @@
+<h1 align="center">From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation</h1>
+
 <p align="center">
-  <strong>From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation</strong>
-  <br>
   <em>Ziwei Huang, Ying Shu, Hao Fang, Quanyu Long, Wenya Wang, Qiushi Guo, Tiezheng Ge, Leilei Gan</em>
   <br>
   Zhejiang University | Alibaba Group | Nanyang Technological University
@@ -50,7 +50,7 @@ conda activate customized
 pip install -r requirements.txt
 ```
 ---
-### Dataset Preparation
+### 1. Dataset Preparation
 Training datasets:
 Download and preprocess the [Syncd](https://github.com/nupurkmr9/syncd) dataset.
 
@@ -58,7 +58,7 @@ Evaluation datasets:
 Please refer to [DreamBench](https://github.com/google/dreambooth) for benchmark images and prompts.
 
 ---
-### Customized-GRPO Training
+### 2. Customized-GRPO Training
 Training in Customized-GRPO can be flexibly configured to use different reward models for optimizing the policy. By default, we adopt DINO-v2 for identity preservation and HPS-V3 for prompt adherence, which together provide strong alignment with human preferences
 - Train with DINO-v2 and HPS-V3 as reward models (recommended):
 ```bash
@@ -69,11 +69,11 @@ bash ./scripts/train_customized_grpo.sh
 bash ./scripts/train_grpo_vlm.sh
 ```
 
-All training scripts are optimized on 8 GPUs by default. You can adjust the GPU number, batch size, reward functions, and other training parameters in the corresponding config files located in config/train/*.yaml
+All training scripts are optimized on 8 GPUs by default. You can adjust the GPU number, batch size, reward functions, and other training parameters in the corresponding config files located in '''config/train/*.yaml'''
 
 ---
 
-### Inference
+### 3. Inference
 To generate images using the trained models:
 ```bash
 bash ./scripts/eval_dreambench.sh
