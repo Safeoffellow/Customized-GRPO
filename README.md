@@ -1,13 +1,3 @@
-# Customized-GRPO: From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation
-
-<div align="center">
-
-[![ACL](https://img.shields.io/badge/ACL-2026_Main-red.svg)]()
-[![arXiv](https://img.shields.io/badge/arXiv-2510.18263-b31b1b.svg）](https://arxiv.org/abs/2510.18263)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-</div>
-
 <p align="center">
   <strong>From Competition to Synergy: Unlocking Reinforcement Learning for Subject-Driven Image Generation</strong>
   <br>
@@ -16,9 +6,17 @@
   Zhejiang University | Alibaba Group | Nanyang Technological University
 </p>
 
+<div align="center">
+
+[![ACL](https://img.shields.io/badge/ACL-2026_Main-red.svg)](https://2026.aclweb.org/)
+[![arXiv](https://img.shields.io/badge/arXiv-2510.18263-b31b1b.svg)](https://arxiv.org/abs/2510.18263)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+</div>
+
 ## 🔥 News
 - **[2026.04]** 🎉 Our paper has been accepted to **ACL 2026 Main Conference**!
-- **[2026.04]** 🚀 We officially release the code, pre-trained weights, and evaluation scripts for Customized-GRPO.
+- **[2025.10]** 🚀 We officially release the code, pre-trained weights, and evaluation scripts for Customized-GRPO.
 
 ---
 
